@@ -3,10 +3,14 @@ from os import path
 import re
 import pandas as pd
 from requests import get
+import yaml
 
 # TG相关信息
-bot_token = ''
-chat_id = ''
+with open('../conf/chat.yaml') as f:
+    content = yaml.safe_load(f)
+
+bot_token = content['bot_token']
+chat_id = content['chat_id']
 
 # 找log 位置
 log_path = path.join(Path(__file__).parent, 'debug')
