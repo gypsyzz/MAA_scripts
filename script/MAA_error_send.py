@@ -5,8 +5,8 @@ import pandas as pd
 from requests import get
 
 # TG相关信息
-bot_token = '7357066898:AAFJsuvEEc2xRUGv5lgsjmN1NZPVfvno9zA'
-chat_id = '2059258612'
+bot_token = ''
+chat_id = ''
 
 # 找log 位置
 log_path = path.join(Path(__file__).parent, 'debug')
