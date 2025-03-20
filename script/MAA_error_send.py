@@ -13,7 +13,7 @@ bot_token = content['bot_token']
 chat_id = content['chat_id']
 
 # 找log 位置
-log_path = path.join(Path(__file__).parent, 'debug')
+log_path = path.join(content['MAA_path'], 'debug')
 
 # 读取log
 with open(f'{log_path}/gui.log', encoding='utf-8', errors='ignore') as f:
