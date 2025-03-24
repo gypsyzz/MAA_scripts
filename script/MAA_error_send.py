@@ -30,7 +30,8 @@ content = content_rev[::-1]
 
 # 辅助列表
 list_logging = []
-important_message = ('出错',)
+operator_log = []
+important_message = ('出错', '6 ★')
 
 # 逐行搜索,如果需要加入到输出
 for c in content:
