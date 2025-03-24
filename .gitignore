@@ -1,3 +1,4 @@
 *.ipynb
 ._*
 conf/chat.yaml
+debug/

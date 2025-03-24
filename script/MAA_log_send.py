@@ -1,22 +1,22 @@
 from pathlib import Path
-from os import path
 import re
 import pandas as pd
 from requests import get
 import yaml
+import sys
 
 # TG相关信息
-with open('../conf/chat.yaml') as f:
+with open(Path(sys.argv[0]).parent.joinpath('conf', 'chat.yaml')) as f:
     content = yaml.safe_load(f)
 
 bot_token = content['bot_token']
 chat_id = content['chat_id']
 
 # 找log 位置
-log_path = path.join(content['MAA_path'], 'debug')
+log_path = Path(content['MAA_path']).joinpath('debug', 'gui.log')
 
 # 读取log
-with open(f'{log_path}/gui.log', encoding='utf-8', errors='ignore') as f:
+with open(log_path, encoding='utf-8', errors='ignore') as f:
     content = f.read()
 content = content.split('\n')
 
